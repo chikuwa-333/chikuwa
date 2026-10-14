@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>竹輪。</title>
+<style>
+  :root {
+    --chikuwa: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABsAJADASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAMEBQYCAf/EACoQAAICAgEDBAEEAwEAAAAAAAABAgMEESESMVEFIkFhMhMUcdEjQoFS/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAMBAgT/xAAeEQEBAQADAQEAAwAAAAAAAAAAAQIDESESMQQTUf/aAAwDAQACEQMRAD8A6gAEFQAAAAAAAAAAAAAAAAAAAAAAAFe/LhRPpem13+i3j+oVyjtNduyWzlvVpWQz7Hz+RTXqE67U621JPZLXLcu5x/Ttv16L5S6YrqXh62QO6pS6etb8Mwo+pKyUJKKU5PnZ9lmwuu6IKPV2TS1sjf5N78Vzwf631z25BhxzLseSc+lJvWlJbX8o0sfPovh1KTi13TRXHLL5fK53w6ns9WgeYTjZHqhJSXlHoqiAA0AAAAAAAAACK6z9ODfgCr6ph15NfV1RhYl3fZnIZMXXc1tbTLvq2fdOxrqaj4MK2yTbezjePpTGvlZjnOm1SkkyfIvplTHJxemDX5Vybb35MWyf/rk813JS1LleG9E/6Z+vTnmjoqcuOZRGF3SpLa9uoR/n+S7qzF174OLS/KXD/v8A4c9RmKuMK+iLgn8rz9mvHDplq3HyIzrWnKE3yR3nr9XzY08Sy6Ns7Mde9d6pPv8A2auL6jC722wdUvvsc/DKhXcpVrp6XrfU3wacLlc4xvUpaXEovk5zz/PkT5OOa/Y2gR4mpR6VPqj8b7osSpsS30tryj2Y39zt4NZ+b0jAB2wAAAAACvkx6oNeSweJx2gOQ9UxWm3owrYaZ3ebiq2L45OYz8KUJNqIaw5xK06+do0LKmvgglBnUFVSlHhs0/T8qVE/y3GS0yhOvfdHmDdb57HO8TU6V4+X5vrfkotddM218xfDRuel59rrVdkISSXCa7nJ03vjnsaVFzU1JNng1i5r16s1l22LlKxJSjCuPwvsuQy3CXQ1GP2uzOVr9RnNrrlvXk0cfPWtS9y+Uz1Y3Hi1iuh/x39+/ldyCdEo8x9y+ipVmRcV0vjx/RdqyHJLemvBbuVKyxAC1N12Plf9+StJdMmvBlnRK+AAND40fQBFOOyhmY0bIvjk02tkVkNoDjs7BlBtpcGVZXp9juMjHU000YGfgdMm4oNYEofRFKvZetqcXyiFxN7FSKdcvKNDGtT1pkDgmeVFxluPDJ7zNK43141oyfcsVXyjLuZtFyktfPyi5B77Hns6V7la2PkPa0zZxbG49znsVbkjex/ZU2/hbKcXaHJ0v12blrfJ9k9ybKXpvVKM7Zd5vZcLS9xOzqgANAAAA1sACGdeypfQpJpo0SOcNoDls70/W5RRj20uL7HcW0qS7GTmenKW3FGNcu4HlwZp24Mov8WQ/t2vgCh0NPjv5LePc00p8fZKsf6JI4232OdZldTVjRwuWmbdWpVOL7NHP41cqntPjwaEciektmYz0zV7bdXTGCjHsiQy8a6W+WaMJdSR25ewAaAAAAAAAAPLimeJ0pkoAo2YqfeKKluCt8QRs62eeleDBgyw9f6nj9tr4N6UIv4IZVQ8AZCofg9xqe+xflXFCMUBFTW0zQp4WiKEUWILgD0ADR//2Q==");
+  }
+
+  html, body {
+    margin: 0;
+  }
+
+  body {
+    position: relative;
+    min-height: 140vh;
+    background-image: var(--chikuwa);
+    background-size: 120px 90px;
+    background-repeat: repeat;
+    font-family: sans-serif;
+  }
+
+  #words {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    max-height: calc(100vh - 16px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2px 16px;
+    pointer-events: none;
+  }
+  .word {
+    color: #000000;
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  #link {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #00e;
+    text-decoration: underline;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  #link:visited { color: #0000ff; }
+
+  #msg {
+    position: absolute;
+    top: 115vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff0000;
+    font-size: 36px;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div id="words"></div>
+
+<div id="msg">既に手遅れです。</div>
+
+<a id="link" href="https://ja.wikipedia.org/wiki/%E3%81%A1%E3%81%8F%E3%82%8F">竹輪</a>
+
+<script>
+  const words = [ "竹輪の穴を覗く時、竹輪の穴もまた、こちらを覗いている。吸い込まれないように注意せよ。さもなければ、明日の味噌汁の具材は、あなたになってしまうでしょう。" ];
+
+  const box = document.getElementById("words");
+  for (const w of words) {
+    const el = document.createElement("div");
+    el.className = "word";
+    el.textContent = w;
+    box.appendChild(el);
+  }
+</script>
+  
+</body>
+</html>
